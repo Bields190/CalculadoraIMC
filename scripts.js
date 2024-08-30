@@ -1,18 +1,57 @@
-let botaoCalcular = document.getElementById(btn_calcular);
-function calculandoIMC(){
-    let peso = document.getElementById("peso").value;
-    let altura = document.getElementById("altura").value/100;
-    let resultado = document.getElementById("resultado")
-    if(altura !== "" && peso !==""){
-        let imc = (peso / (altura*altura)).toFixed(2);
-        let mensagem = "";
-        if(imc < 18.5){ mensagem = "Abaixo do peso!"
-        }else if(imc < 25){ ensagem = "Você está com o peso ideal!"
-        }else if(imc < 30){ mensagem = "Você está levemente acima do peso!"
-        }else if(imc < 35){ mensagem = "Cuidado! Obesidade grau I"
-        }else if(imc < 40){mensagem = "Cuidado! Obesidade grau II"
-        }else { mensagem = "Cuidado! Obesidade grau III"
-        }
-        resultado.textContent = `Seu IMC é ${imc}! ${mensagem}`;      
-    }else{ resultado.textContent = "Preencha todos os campos!!!" }
-} btn_calcular.addEventListener('click', calculandoIMC);
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Portal do IMC</title>
+    <link rel="stylesheet" href="estilo.css">
+<body>
+    <h1>Índice de massa corporal</h1>
+
+    <p>Para obter o IMC, divida seu peso (em quilos) pela altura (em metros)
+    elevada ao quadrado (altura x altura). É saudável entre 18,5 e 24,9..</p>
+<div class=tela1>
+    <h1>Calculadora IMC HTML CSS JS</h1>
+    <form>
+        <p>Digite seu peso</p>
+
+        <input id='peso' type='number'/>
+        <span>Kg</span>
+        <div>
+            <p>Digite sua altura</p>
+            <input id='altura' type='number'/>
+            <span>Cm</span>
+        </div>
+        <div>
+            <input id='btn_calcular' class='botao' type="button" value="Calcular">
+        </div>
+    </form>
+    <div id="resultado"></div>
+</div>
+<br/>
+
+  <h1>Tabela de IMC</h1>
+    <table>
+            <tr>
+                <th>Categoria</th>
+                <th>Intervalo de IMC</th>
+            </tr>
+            <tr>
+                <td>Abaixo do Peso</td>
+                <td>Abaixo de 18.5</td>
+            </tr>
+            <tr>
+                <td>Peso Normal</td>
+                <td>18.5 - 24.9</td>
+            </tr>
+            <tr>
+                <td>Sobrepeso</td>
+                <td>25 - 29.9</td>
+            </tr>
+            <tr>
+                <td>Obesidade</td>
+                <td>Acima de 30</td>
+            </tr>
+    </table>
+
+<script src="scripts.js"></script>
+</body>
+</html>
