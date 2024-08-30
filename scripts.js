@@ -9,13 +9,8 @@ function calculandoIMC(){
         if(imc < 18.5){ mensagem = "Abaixo do peso!"
         }else if(imc < 25){ ensagem = "Você está com o peso ideal!"
         }else if(imc < 30){ mensagem = "Você está levemente acima do peso!"
-<<<<<<< HEAD
         }else if(imc < 35){ mensagem = "Cuidado! Obesidade grau I"
         }else if(imc < 40){mensagem = "Cuidado! Obesidade grau II"
-=======
-        }else if(imc > 35){ mensagem = "Cuidado! Obesidade grau I"
-        }else if(imc > 40){mensagem = "Cuidado! Obesidade grau II"
->>>>>>> a33a4e40c669784f0ad16b3861b65bced4088e31
         }else { mensagem = "Cuidado! Obesidade grau III"
         }
         resultado.textContent = `Seu IMC é ${imc}! ${mensagem}`;      
