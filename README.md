@@ -5,4 +5,4 @@ Nesta calculadora, veremos se seu IMC está de acordo com o padrao dar normas de
 Esperamos que tenha gostado!
 
 Repositório desenvolvido por:
-- Gabriel daniel e Ludymilla Valentim
+- Gabriel Daniel e Ludymilla Valentim
